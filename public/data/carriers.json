@@ -1,0 +1,1070 @@
+{
+  "version": "1.1.0",
+  "updatedAt": "2026-06-25",
+  "carriers": [
+    {
+      "id": "american",
+      "airline": "American Airlines",
+      "iata": "AA",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 45,
+        "widthCm": 35,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.aa.com/i18n/travel-info/baggage/carry-on-baggage.jsp"
+    },
+    {
+      "id": "delta",
+      "airline": "Delta Air Lines",
+      "iata": "DL",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 35,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.delta.com/us/en/baggage/carry-on-baggage"
+    },
+    {
+      "id": "united",
+      "airline": "United Airlines",
+      "iata": "UA",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 35,
+        "heightCm": 22,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 25,
+        "heightCm": 22,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.united.com/en/us/baggage/carry-on-bags"
+    },
+    {
+      "id": "southwest",
+      "airline": "Southwest Airlines",
+      "iata": "WN",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 61,
+        "widthCm": 41,
+        "heightCm": 25,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 41,
+        "widthCm": 23,
+        "heightCm": 25,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://support.southwest.com/helpcenter/s/article/carryon-baggage-policy"
+    },
+    {
+      "id": "jetblue",
+      "airline": "JetBlue Airways",
+      "iata": "B6",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 22,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.jetblue.com/help/carry-on-bags"
+    },
+    {
+      "id": "alaska",
+      "airline": "Alaska Airlines",
+      "iata": "AS",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.alaskaair.com/content/travel-info/baggage/carry-on-baggage"
+    },
+    {
+      "id": "air-canada",
+      "airline": "Air Canada",
+      "iata": "AC",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 16,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.aircanada.com/ca/en/aco/home/plan/baggage/carry-on.html"
+    },
+    {
+      "id": "westjet",
+      "airline": "WestJet",
+      "iata": "WS",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 53,
+        "widthCm": 38,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 41,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.westjet.com/en-ca/baggage/carry-on"
+    },
+    {
+      "id": "british-airways",
+      "airline": "British Airways",
+      "iata": "BA",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 45,
+        "heightCm": 25,
+        "weightKg": 23
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 23
+      },
+      "policyUrl": "https://www.britishairways.com/en-gb/information/baggage-essentials/carry-on-baggage"
+    },
+    {
+      "id": "lufthansa",
+      "airline": "Lufthansa",
+      "iata": "LH",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.lufthansa.com/us/en/baggage-overview"
+    },
+    {
+      "id": "air-france",
+      "airline": "Air France",
+      "iata": "AF",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 25,
+        "weightKg": 12
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 12
+      },
+      "policyUrl": "https://wwws.airfrance.us/information/bagages/bagage-cabine-soute"
+    },
+    {
+      "id": "klm",
+      "airline": "KLM",
+      "iata": "KL",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 25,
+        "weightKg": 12
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 12
+      },
+      "policyUrl": "https://www.klm.com/travel/us_en/prepare_for_travel/baggage/cabin_baggage/index.htm"
+    },
+    {
+      "id": "ryanair",
+      "airline": "Ryanair",
+      "iata": "FR",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 20,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.ryanair.com/us/en/useful-info/help-centre/baggage-overview"
+    },
+    {
+      "id": "easyjet",
+      "airline": "easyJet",
+      "iata": "U2",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 45,
+        "heightCm": 25,
+        "weightKg": 15
+      },
+      "personalItem": {
+        "lengthCm": 45,
+        "widthCm": 36,
+        "heightCm": 20,
+        "weightKg": 15
+      },
+      "policyUrl": "https://www.easyjet.com/en/help/baggage/cabin-bag-and-hold-luggage"
+    },
+    {
+      "id": "iberia",
+      "airline": "Iberia",
+      "iata": "IB",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.iberia.com/us/baggage/cabin-luggage/"
+    },
+    {
+      "id": "swiss",
+      "airline": "Swiss International Air Lines",
+      "iata": "LX",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.swiss.com/us/en/prepare/baggage/carry-on-baggage"
+    },
+    {
+      "id": "turkish",
+      "airline": "Turkish Airlines",
+      "iata": "TK",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.turkishairlines.com/en-int/any-questions/carry-on-baggage/"
+    },
+    {
+      "id": "emirates",
+      "airline": "Emirates",
+      "iata": "EK",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 38,
+        "heightCm": 20,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 45,
+        "widthCm": 35,
+        "heightCm": 20,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.emirates.com/us/english/before-you-fly/baggage/cabin-baggage/"
+    },
+    {
+      "id": "qatar",
+      "airline": "Qatar Airways",
+      "iata": "QR",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 50,
+        "widthCm": 37,
+        "heightCm": 25,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.qatarairways.com/en-us/baggage/allowance.html"
+    },
+    {
+      "id": "etihad",
+      "airline": "Etihad Airways",
+      "iata": "EY",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.etihad.com/en-us/manage/baggage/cabin-baggage"
+    },
+    {
+      "id": "singapore",
+      "airline": "Singapore Airlines",
+      "iata": "SQ",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.singaporeair.com/en_UK/us/travel-info/baggage/carry-on-baggage/"
+    },
+    {
+      "id": "cathay",
+      "airline": "Cathay Pacific",
+      "iata": "CX",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.cathaypacific.com/cx/en_US/travel-information/baggage/cabin-baggage.html"
+    },
+    {
+      "id": "ana",
+      "airline": "All Nippon Airways",
+      "iata": "NH",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 25,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.ana.co.jp/en/us/travel-information/baggage/carry-on/"
+    },
+    {
+      "id": "jal",
+      "airline": "Japan Airlines",
+      "iata": "JL",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.jal.co.jp/en/inter/baggage/carry-on/"
+    },
+    {
+      "id": "korean",
+      "airline": "Korean Air",
+      "iata": "KE",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 12
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 12
+      },
+      "policyUrl": "https://www.koreanair.com/contents/plan-your-travel/baggage/carry-on-baggage"
+    },
+    {
+      "id": "qantas",
+      "airline": "Qantas",
+      "iata": "QF",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 41,
+        "widthCm": 28,
+        "heightCm": 13,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.qantas.com/us/en/travel-info/baggage/carry-on-baggage.html"
+    },
+    {
+      "id": "air-india",
+      "airline": "Air India",
+      "iata": "AI",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.airindia.com/in/en/baggage-guidelines/cabin-baggage.html"
+    },
+    {
+      "id": "indigo",
+      "airline": "IndiGo",
+      "iata": "6E",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 25,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.goindigo.in/baggage/cabin-baggage.html"
+    },
+    {
+      "id": "airasia",
+      "airline": "AirAsia",
+      "iata": "AK",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 7
+      },
+      "policyUrl": "https://support.airasia.com/s/article/Cabin-Baggage-allowance"
+    },
+    {
+      "id": "cebu",
+      "airline": "Cebu Pacific",
+      "iata": "5J",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 35,
+        "widthCm": 20,
+        "heightCm": 30,
+        "weightKg": 7
+      },
+      "policyUrl": "https://help.cebupacificair.com/article/Hand-Carry-Baggage-115747"
+    },
+    {
+      "id": "china-eastern",
+      "airline": "China Eastern Airlines",
+      "iata": "MU",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://us.ceair.com/en/baggage"
+    },
+    {
+      "id": "china-southern",
+      "airline": "China Southern Airlines",
+      "iata": "CZ",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 5
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 5
+      },
+      "policyUrl": "https://www.csair.com/en/tourguide/luggage_service/carryon_luggage/"
+    },
+    {
+      "id": "latam",
+      "airline": "LATAM Airlines",
+      "iata": "LA",
+      "region": "latin-america",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 25,
+        "weightKg": 12
+      },
+      "personalItem": {
+        "lengthCm": 45,
+        "widthCm": 35,
+        "heightCm": 20,
+        "weightKg": 12
+      },
+      "policyUrl": "https://www.latamairlines.com/us/en/experience/baggage/carry-on"
+    },
+    {
+      "id": "avianca",
+      "airline": "Avianca",
+      "iata": "AV",
+      "region": "latin-america",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 35,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.avianca.com/us/en/experience/prepare-your-trip/baggage/carry-on/"
+    },
+    {
+      "id": "copa",
+      "airline": "Copa Airlines",
+      "iata": "CM",
+      "region": "latin-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 26,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.copaair.com/en-gs/travel-information/baggage/carry-on/"
+    },
+    {
+      "id": "aeromexico",
+      "airline": "Aeroméxico",
+      "iata": "AM",
+      "region": "latin-america",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.aeromexico.com/en-us/travel-information/baggage/carry-on"
+    },
+    {
+      "id": "ethiopian",
+      "airline": "Ethiopian Airlines",
+      "iata": "ET",
+      "region": "africa",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.ethiopianairlines.com/aa/information/baggage/carry-on-baggage"
+    },
+    {
+      "id": "kenya",
+      "airline": "Kenya Airways",
+      "iata": "KQ",
+      "region": "africa",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 38,
+        "heightCm": 23,
+        "weightKg": 12
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 12
+      },
+      "policyUrl": "https://www.kenya-airways.com/en/plan/baggage/cabin-baggage/"
+    },
+    {
+      "id": "south-african",
+      "airline": "South African Airways",
+      "iata": "SA",
+      "region": "africa",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.flysaa.com/help/baggage/cabin-baggage"
+    },
+    {
+      "id": "egyptair",
+      "airline": "EgyptAir",
+      "iata": "MS",
+      "region": "africa",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.egyptair.com/en/fly/baggage/Pages/cabin-baggage.aspx"
+    },
+    {
+      "id": "finnair",
+      "airline": "Finnair",
+      "iata": "AY",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.finnair.com/us-en/baggage/carry-on-baggage"
+    },
+    {
+      "id": "sas",
+      "airline": "Scandinavian Airlines",
+      "iata": "SK",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.flysas.com/us-en/travel-info/baggage/cabin-baggage/"
+    },
+    {
+      "id": "norwegian",
+      "airline": "Norwegian Air",
+      "iata": "DY",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.norwegian.com/us/travel-info/baggage/cabin-baggage/"
+    },
+    {
+      "id": "vueling",
+      "airline": "Vueling",
+      "iata": "VY",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 20,
+        "heightCm": 30,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.vueling.com/en/vueling-services/prepare-your-trip/luggage"
+    },
+    {
+      "id": "wizz",
+      "airline": "Wizz Air",
+      "iata": "W6",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "policyUrl": "https://wizzair.com/en-gb/information-and-services/travel-information/baggage"
+    },
+    {
+      "id": "spirit",
+      "airline": "Spirit Airlines",
+      "iata": "NK",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 46,
+        "widthCm": 36,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://customersupport.spirit.com/en-us/category/article/KA-01101"
+    },
+    {
+      "id": "frontier",
+      "airline": "Frontier Airlines",
+      "iata": "F9",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 61,
+        "widthCm": 41,
+        "heightCm": 25,
+        "weightKg": 15.9
+      },
+      "personalItem": {
+        "lengthCm": 46,
+        "widthCm": 36,
+        "heightCm": 20,
+        "weightKg": 15.9
+      },
+      "policyUrl": "https://faq.flyfrontier.com/help/carry-on-baggage-policy"
+    },
+    {
+      "id": "hawaiian",
+      "airline": "Hawaiian Airlines",
+      "iata": "HA",
+      "region": "north-america",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 18.1
+      },
+      "personalItem": {
+        "lengthCm": 43,
+        "widthCm": 33,
+        "heightCm": 20,
+        "weightKg": 18.1
+      },
+      "policyUrl": "https://www.hawaiianairlines.com/legal/carry-on-baggage"
+    },
+    {
+      "id": "virgin-atlantic",
+      "airline": "Virgin Atlantic",
+      "iata": "VS",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 23
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 23
+      },
+      "policyUrl": "https://www.virginatlantic.com/us/en/travel-information/baggage/cabin-baggage.html"
+    },
+    {
+      "id": "virgin-australia",
+      "airline": "Virgin Australia",
+      "iata": "VA",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.virgin-australia.com/au/en/travel-info/baggage/carry-on-baggage/"
+    },
+    {
+      "id": "air-new-zealand",
+      "airline": "Air New Zealand",
+      "iata": "NZ",
+      "region": "asia-pacific",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.airnewzealand.com/carry-on-baggage"
+    },
+    {
+      "id": "saudia",
+      "airline": "Saudia",
+      "iata": "SV",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 36,
+        "heightCm": 23,
+        "weightKg": 7
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 7
+      },
+      "policyUrl": "https://www.saudia.com/pages/before-flying/baggage/cabin-baggage"
+    },
+    {
+      "id": "el-al",
+      "airline": "El Al",
+      "iata": "LY",
+      "region": "middle-east",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 40,
+        "heightCm": 25,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.elal.com/en/PassengersInfo/Baggage/Pages/CabinBaggage.aspx"
+    },
+    {
+      "id": "aegean",
+      "airline": "Aegean Airlines",
+      "iata": "A3",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 56,
+        "widthCm": 45,
+        "heightCm": 25,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 8
+      },
+      "policyUrl": "https://en.aegeanair.com/travel-info/baggage/cabin-baggage/"
+    },
+    {
+      "id": "austrian",
+      "airline": "Austrian Airlines",
+      "iata": "OS",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 23,
+        "weightKg": 8
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 10,
+        "weightKg": 8
+      },
+      "policyUrl": "https://www.austrian.com/us/en/baggage"
+    },
+    {
+      "id": "tap",
+      "airline": "TAP Air Portugal",
+      "iata": "TP",
+      "region": "europe",
+      "carryOn": {
+        "lengthCm": 55,
+        "widthCm": 40,
+        "heightCm": 20,
+        "weightKg": 10
+      },
+      "personalItem": {
+        "lengthCm": 40,
+        "widthCm": 30,
+        "heightCm": 15,
+        "weightKg": 10
+      },
+      "policyUrl": "https://www.flytap.com/en-us/baggage/carry-on"
+    }
+  ]
+}

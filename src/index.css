@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --color-surface: #0c1222;
+  --color-surface-raised: #141c2e;
+  --color-surface-overlay: #1a2438;
+  --color-border: #2a3548;
+  --color-muted: #94a3b8;
+  --color-accent: #38bdf8;
+  --color-accent-end: #818cf8;
+  --color-success: #34d399;
+  --color-danger: #f87171;
+}
+
+@layer base {
+  html {
+    @apply bg-surface text-slate-100 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply min-h-dvh;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .kn-gradient {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .kn-gradient-bg {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-end) 100%);
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-border bg-surface-raised/80 backdrop-blur-sm;
+  }
+
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
