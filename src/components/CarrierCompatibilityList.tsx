@@ -90,8 +90,13 @@ export function CarrierCompatibilityList({
               >
                 <path d="m9 18 6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="flex-1">{GROUP_LABELS[group]}</span>
-              <span className="font-medium text-muted">{items.length}</span>
+              <span className="flex-1">
+                {GROUP_LABELS[group]}
+                <span className="font-medium text-muted">
+                  {' '}
+                  ({items.length}/{ranked.length})
+                </span>
+              </span>
             </button>
 
             {open && (
