@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: null,
       includeAssets: ['favicon.svg'],
       manifest: {
         name: 'KNbag — Bag Size Checker',
@@ -30,7 +31,17 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,json,woff2}'],
+        globIgnores: ['**/transformers.web-*.js', '**/ort-wasm*.wasm'],
         runtimeCaching: [
+          {
+            urlPattern: /\/assets\/.*\.(js|wasm)$/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'app-assets',
+              expiration: { maxEntries: 24, maxAgeSeconds: 60 * 60 * 24 * 7 },
+              networkTimeoutSeconds: 10,
+            },
+          },
           {
             urlPattern: /\/data\/.*\.json$/,
             handler: 'StaleWhileRevalidate',

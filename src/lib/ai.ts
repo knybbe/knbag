@@ -57,8 +57,13 @@ export async function downloadAiModel(
     loadState = 'ready'
   } catch (err) {
     loadState = 'error'
-    loadError = err instanceof Error ? err.message : 'Model download failed'
-    throw err
+    const raw = err instanceof Error ? err.message : 'Model download failed'
+    if (/failed to fetch dynamically imported module/i.test(raw)) {
+      loadError = 'App update available — refresh the page and try again'
+    } else {
+      loadError = raw
+    }
+    throw new Error(loadError)
   }
 }
 
