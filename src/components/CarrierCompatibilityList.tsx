@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { CarrierCompatibility, CarrierFitGroup } from '../lib/carrierMatch'
 import { GROUP_LABELS } from '../lib/carrierMatch'
 import { formatCarrierLimits } from '../lib/formatLimits'
@@ -37,79 +38,90 @@ const GROUP_STYLES: Record<CarrierFitGroup, string> = {
   none: 'text-muted',
 }
 
+const GROUP_ORDER: CarrierFitGroup[] = ['both', 'carry-on-only', 'none']
+
 export function CarrierCompatibilityList({
   ranked,
   carriersCached,
   units,
 }: CarrierCompatibilityListProps) {
-  const groups = (['both', 'carry-on-only', 'none'] as CarrierFitGroup[]).map((group) => ({
+  const [openGroups, setOpenGroups] = useState<Record<CarrierFitGroup, boolean>>({
+    both: true,
+    'carry-on-only': false,
+    none: false,
+  })
+
+  const groups = GROUP_ORDER.map((group) => ({
     group,
     items: ranked.filter((r) => r.group === group),
-  }))
+  })).filter((g) => g.items.length > 0)
 
-  const fitCount = ranked.filter((r) => r.group !== 'none').length
+  if (!carriersCached || ranked.length === 0) {
+    return null
+  }
+
+  function toggleGroup(group: CarrierFitGroup) {
+    setOpenGroups((prev) => ({ ...prev, [group]: !prev[group] }))
+  }
 
   return (
-    <section className="glass-card p-5 space-y-4">
-      <div>
-        <h2 className="text-base font-semibold text-slate-100">Compatible airlines</h2>
-        {carriersCached && (
-          <p className="mt-1 text-sm text-muted">
-            {fitCount} of {ranked.length} carriers accept your bag as carry-on or personal item
-          </p>
-        )}
-        {!carriersCached && (
-          <p className="mt-1 text-sm text-muted">
-            Carrier data loading… refresh in Settings if needed.
-          </p>
-        )}
+    <div className="space-y-1">
+      <div className="grid grid-cols-[1fr_3.5rem_3.5rem] gap-x-2 px-1 pb-1 text-[10px] font-medium uppercase tracking-wide text-muted/80">
+        <span />
+        <span className="text-center">C/O</span>
+        <span className="text-center">Pers.</span>
       </div>
 
-      {ranked.length > 0 && (
-        <>
-          <div className="grid grid-cols-[1fr_3.5rem_3.5rem] gap-x-2 border-b border-border pb-2 text-xs font-semibold uppercase tracking-wide text-muted">
-            <span>Airline</span>
-            <span className="text-center">C/O</span>
-            <span className="text-center">Pers.</span>
-          </div>
+      {groups.map(({ group, items }) => {
+        const open = openGroups[group]
+        return (
+          <div key={group} className="border-b border-border/50 last:border-0">
+            <button
+              type="button"
+              onClick={() => toggleGroup(group)}
+              className={`flex w-full items-center gap-2 px-1 py-2.5 text-left text-xs font-semibold uppercase tracking-wide ${GROUP_STYLES[group]}`}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className={`size-3.5 shrink-0 transition-transform ${open ? 'rotate-90' : ''}`}
+              >
+                <path d="m9 18 6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="flex-1">{GROUP_LABELS[group]}</span>
+              <span className="font-medium text-muted">{items.length}</span>
+            </button>
 
-          <div className="space-y-5">
-            {groups.map(({ group, items }) =>
-              items.length === 0 ? null : (
-                <div key={group}>
-                  <h3 className={`mb-2 text-xs font-bold uppercase tracking-wide ${GROUP_STYLES[group]}`}>
-                    {GROUP_LABELS[group]}
-                    <span className="ml-1.5 font-medium text-muted">({items.length})</span>
-                  </h3>
-                  <ul className="space-y-0.5">
-                    {items.map((entry) => (
-                      <li
-                        key={entry.carrier.id}
-                        className="grid grid-cols-[1fr_3.5rem_3.5rem] gap-x-2 items-start rounded-lg px-1 py-2 transition hover:bg-surface-overlay/60"
-                      >
-                        <div className="min-w-0">
-                          <p className="truncate text-sm font-medium text-slate-200">
-                            {entry.carrier.airline}
-                          </p>
-                          <p className="mt-0.5 text-xs leading-snug text-muted">
-                            {formatCarrierLimits(entry.carrier, units)}
-                          </p>
-                        </div>
-                        <div className="flex justify-center pt-0.5">
-                          <FitCell fits={entry.carryOnFits} />
-                        </div>
-                        <div className="flex justify-center pt-0.5">
-                          <FitCell fits={entry.personalFits} />
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ),
+            {open && (
+              <ul className="space-y-0.5 pb-2">
+                {items.map((entry) => (
+                  <li
+                    key={entry.carrier.id}
+                    className="grid grid-cols-[1fr_3.5rem_3.5rem] gap-x-2 items-start rounded-lg px-1 py-2 transition hover:bg-surface-overlay/40"
+                  >
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-medium text-slate-200">
+                        {entry.carrier.airline}
+                      </p>
+                      <p className="mt-0.5 text-xs leading-snug text-muted">
+                        {formatCarrierLimits(entry.carrier, units)}
+                      </p>
+                    </div>
+                    <div className="flex justify-center pt-0.5">
+                      <FitCell fits={entry.carryOnFits} />
+                    </div>
+                    <div className="flex justify-center pt-0.5">
+                      <FitCell fits={entry.personalFits} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
-        </>
-      )}
-    </section>
+        )
+      })}
+    </div>
   )
 }

@@ -63,50 +63,36 @@ export function SettingsPage({ onCarriersChange }: SettingsPageProps) {
   return (
     <div className="space-y-6 pb-28">
       <header>
-        <BrandLogo size="sm" showTagline />
+        <BrandLogo size="sm" />
       </header>
 
-      <section className="glass-card p-5 space-y-4">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <h2 className="text-base font-semibold text-slate-100">Carrier data</h2>
-            <p className="mt-1 text-sm text-muted">
-              {dataInfo?.downloaded
-                ? `${dataInfo.count} carriers · v${dataInfo.version}`
-                : 'Not downloaded yet'}
-            </p>
-            {dataInfo?.syncedAt && (
-              <p className="text-xs text-muted">
-                Last synced {new Date(dataInfo.syncedAt).toLocaleString()}
-              </p>
-            )}
-          </div>
+      <section className="space-y-3">
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-sm text-muted">
+            {dataInfo?.downloaded
+              ? `${dataInfo.count} · v${dataInfo.version}`
+              : 'No data'}
+          </p>
           <button
             type="button"
             onClick={handleRefreshCarriers}
             disabled={syncing || !online}
-            className="shrink-0 rounded-xl border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-semibold text-accent disabled:opacity-40"
+            className="shrink-0 rounded-lg border border-accent/40 bg-accent/10 px-3 py-2 text-sm font-medium text-accent disabled:opacity-40"
           >
-            {syncing ? 'Syncing…' : online ? 'Refresh' : 'Offline'}
+            {syncing ? '…' : online ? 'Refresh' : 'Offline'}
           </button>
         </div>
-        {syncMessage && (
-          <p className="text-sm text-slate-300">{syncMessage}</p>
-        )}
-        <p className="text-xs text-muted leading-relaxed">
-          Download or update airline limits for offline use. Always verify on the airline&apos;s website.
-        </p>
+        {syncMessage && <p className="text-xs text-muted">{syncMessage}</p>}
       </section>
 
-      <section className="glass-card p-5 space-y-4">
-        <h2 className="text-base font-semibold text-slate-100">Units</h2>
+      <section>
         <div className="flex gap-2">
           {(['metric', 'imperial'] as const).map((u) => (
             <button
               key={u}
               type="button"
               onClick={() => setUnits(u)}
-              className={`flex-1 rounded-xl border py-3 text-sm font-semibold capitalize transition ${
+              className={`flex-1 rounded-lg border py-2.5 text-sm font-medium transition ${
                 settings.units === u
                   ? 'border-accent/50 bg-accent/10 text-accent'
                   : 'border-border bg-surface-overlay text-muted'
@@ -118,16 +104,9 @@ export function SettingsPage({ onCarriersChange }: SettingsPageProps) {
         </div>
       </section>
 
-      <section className="glass-card p-5 space-y-4">
-        <div>
-          <h2 className="text-base font-semibold text-slate-100">AI lookup (optional)</h2>
-          <p className="mt-1 text-sm text-muted leading-relaxed">
-            Gemma 4 E2B runs in your browser via WebGPU. Download only on Wi-Fi — roughly 1–2 GB.
-          </p>
-        </div>
-
-        <label className="flex items-center justify-between gap-4 rounded-xl bg-surface-overlay px-4 py-3">
-          <span className="text-sm font-medium text-slate-200">Enable AI-assisted lookup</span>
+      <section className="space-y-3">
+        <label className="flex items-center justify-between gap-4 rounded-lg bg-surface-overlay/60 px-3 py-2.5">
+          <span className="text-sm text-slate-300">AI lookup</span>
           <input
             type="checkbox"
             checked={settings.aiEnabled}
@@ -137,38 +116,26 @@ export function SettingsPage({ onCarriersChange }: SettingsPageProps) {
         </label>
 
         {settings.aiEnabled && (
-          <div className="space-y-3">
+          <div className="space-y-2">
             <button
               type="button"
               onClick={handleDownloadModel}
               disabled={!online || aiProgress !== null}
-              className="w-full rounded-xl border border-border py-3 text-sm font-semibold text-slate-200 disabled:opacity-40"
+              className="w-full rounded-lg border border-border py-2.5 text-sm text-slate-300 disabled:opacity-40"
             >
               {aiProgress !== null
-                ? `Downloading model… ${aiProgress}%`
+                ? `${aiProgress}%`
                 : aiReady
-                  ? 'Re-download AI model'
-                  : 'Download AI model'}
+                  ? 'Re-download model'
+                  : 'Download model'}
             </button>
-            {aiReady && (
-              <p className="text-xs text-success">AI model ready for offline lookup.</p>
-            )}
+            {aiReady && <p className="text-xs text-success">Ready</p>}
             {aiError && <p className="text-xs text-danger">{aiError}</p>}
-            {!online && (
-              <p className="text-xs text-muted">Connect to the internet to download the model.</p>
-            )}
           </div>
         )}
       </section>
 
-      <section className="glass-card p-5 space-y-2">
-        <h2 className="text-base font-semibold text-slate-100">About</h2>
-        <p className="text-sm text-muted leading-relaxed">
-          KNbag checks whether your bag fits airline carry-on and personal-item limits worldwide.
-          Carrier data is cached locally for offline use. Limits change — always confirm with your airline.
-        </p>
-        <p className="text-xs text-muted pt-2">v1.0.0 · PWA · GitHub Pages ready</p>
-      </section>
+      <p className="text-xs text-muted">v1.0.0</p>
     </div>
   )
 }

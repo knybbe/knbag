@@ -59,21 +59,17 @@ export function CheckPage({ carriersCached, carrierCount, dataVersion }: CheckPa
   }
 
   return (
-    <div className="space-y-6 pb-28">
-      <header className="space-y-4">
-        <BrandLogo size="md" showTagline />
+    <div className="space-y-5 pb-28">
+      <header className="space-y-3">
+        <BrandLogo size="md" />
         <StatusBar carriersCached={carriersCached} carrierCount={carrierCount} />
       </header>
 
-      <section className="glass-card p-5 space-y-3">
-        <h2 className="text-base font-semibold text-slate-100">Your item</h2>
-        <p className="text-xs text-muted">Any order — we check all rotations.</p>
-        <DimensionFields
-          units={settings.units}
-          values={itemDims}
-          onChange={updateItem}
-        />
-      </section>
+      <DimensionFields
+        units={settings.units}
+        values={itemDims}
+        onChange={updateItem}
+      />
 
       <CarrierCompatibilityList
         ranked={rankedCarriers}
